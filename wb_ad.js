@@ -1,8 +1,3 @@
-/*
- * @script: https://raw.githubusercontent.com/yichahucha/surge/master/wb_ad.js
- * @regular: ^https?:\/\/(api|mapi)\.weibo\.(cn|com)\/2(\/groups\/timeline|\/statuses\/unread|\/statuses\/extend|\/comments\/build_comments|\/photo\/recommend_list|\/stories\/video_stream|\/statuses\/positives\/get|\/stories\/home_list|\/profile\/statuses|\/statuses\/friends\/timeline|\/service\/picfeed)
- */
-
 const path1 = "/groups/timeline";
 const path2 = "/statuses/unread";
 const path3 = "/statuses/extend";
@@ -14,9 +9,9 @@ const path8 = "/stories/home_list";
 const path9 = "/profile/statuses";
 const path10 = "/statuses/friends/timeline";
 const path11 = "/service/picfeed";
+const url = $request.url;
 
 var body = $response.body;
-let url = $request.url;
 function filter_timeline() {
     let obj = JSON.parse(body);
     let statuses = obj.statuses;

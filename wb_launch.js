@@ -1,13 +1,8 @@
-/*
- * @script: https://raw.githubusercontent.com/yichahucha/surge/master/wb_launch.js
- * @regular: ^https?:\/\/(sdk|wb)app\.uve\.weibo\.com(\/interface\/sdk\/sdkad.php|\/wbapplua\/wbpullad.lua)
- */
-
 const path1 = "/interface/sdk/sdkad.php";
 const path2 = "/wbapplua/wbpullad.lua";
+const url = $request.url;
 
 var body = $response.body;
-let url = $request.url;
 if (url.indexOf(path1) != -1) {
     let re = /\{.*\}/;
     body = body.match(re);
